@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from sklearn.model_selection import train_test_split
 
 # read the CSV file, mainly it is the same as the data file but with added header
 def dataset_read_unprocessed():
@@ -39,9 +40,11 @@ def dataset_process_decimal(m_ds_unprocessed):
     X_data = ds_decimal_processed.loc[:, 'buying':'safety']
     y_data = ds_decimal_processed.loc[:, 'car_class']
 
+    X_data, y_data = X_data.values.astype(int) , y_data.values.astype(int)
+
     return X_data, y_data, ds_decimal_processed
 
-
+# convert categoral data to binary integer data to be valid input/output for the ML algorithms
 def dataset_process_binary(m_ds_unprocessed):
     X_data = pd.get_dummies(m_ds_unprocessed.loc[:,'buying':'safety'])
     y_data = m_ds_unprocessed.loc[:, 'car_class']
@@ -51,4 +54,12 @@ def dataset_process_binary(m_ds_unprocessed):
     for i in range(len(car_class_dict)):
         y_data[y_data== car_class_dict[i][0]] = car_class_dict[i][1]
 
+    X_data, y_data = X_data.values.astype(int), y_data.values.astype(int)
+
     return X_data, y_data
+
+# split the data into training and testing data based on certain test data size
+def split_data_train_test(m_X, m_y, m_test_size):
+    X_train, X_test, y_train, y_test = train_test_split(m_X, m_y, test_size=m_test_size, random_state=42)
+
+    return X_train, X_test, y_train, y_test
