@@ -85,8 +85,8 @@ def knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         knn_train_score_bin, knn_best_n_neighbors_bin = knn_train_cross_validate(X_train_bin, y_train_bin, X_valid_bin, y_valid_bin)
 
         # get KNN algorithm testing results
-        knn_test_score_dec, knn_test_conf_mat_dec, knn_test_metrics_dec = knn_predict(knn_best_n_neighbors_dec, X_train_dec,y_train_dec, X_test_dec, y_test_dec)
-        knn_test_score_bin, knn_test_conf_mat_bin, knn_test_metrics_bin = knn_predict(knn_best_n_neighbors_bin, X_train_bin, y_train_bin, X_test_bin, y_test_bin)
+        knn_test_score_dec, knn_test_cm_dec, knn_test_mt_dec = knn_predict(knn_best_n_neighbors_dec, X_train_dec,y_train_dec, X_test_dec, y_test_dec)
+        knn_test_score_bin, knn_test_cm_bin, knn_test_mt_bin = knn_predict(knn_best_n_neighbors_bin, X_train_bin, y_train_bin, X_test_bin, y_test_bin)
     else:
         print('\n[1-2] K-Nearest Neighbor Classification - k-fold Validation (k=', Config.CFG_KNN_K_FOLD, ')')
         print('====================================================================================')
@@ -95,8 +95,8 @@ def knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         knn_train_score_dec, knn_best_n_neighbors_dec = knn_train_k_fold(X_labelled_dec, y_labelled_dec)
         knn_train_score_bin, knn_best_n_neighbors_bin = knn_train_k_fold(X_labelled_bin, y_labelled_bin)
 
-        knn_test_score_dec, knn_test_conf_mat_dec, knn_test_metrics_dec = knn_predict(knn_best_n_neighbors_dec, X_labelled_dec, y_labelled_dec, X_test_dec, y_test_dec)
-        knn_test_score_bin, knn_test_conf_mat_bin, knn_test_metrics_bin = knn_predict(knn_best_n_neighbors_bin, X_labelled_bin, y_labelled_bin, X_test_bin, y_test_bin)
+        knn_test_score_dec, knn_test_cm_dec, knn_test_mt_dec = knn_predict(knn_best_n_neighbors_dec, X_labelled_dec, y_labelled_dec, X_test_dec, y_test_dec)
+        knn_test_score_bin, knn_test_cm_bin, knn_test_mt_bin = knn_predict(knn_best_n_neighbors_bin, X_labelled_bin, y_labelled_bin, X_test_bin, y_test_bin)
 
     # printing the validation score of the KNN training process
     print('=> Decimal Features: (KNN Validation Score: ', knn_train_score_dec, ' - n= ', knn_best_n_neighbors_dec, ')')
