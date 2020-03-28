@@ -76,46 +76,37 @@ def naive_bayes_predict(nvb_best_alpha, X_labelled, y_labelled, X_test, y_test):
     return metrics.accuracy_score(y_test, y_predict), confusion_mc, metrics_report
 
 # ------------------------------------------------------------------------------------
-def naive_bayes_main_cross_validate(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
-                                    X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
-                                    X_test_dec, y_test_dec, X_test_bin, y_test_bin):
-    print('\n[2-1] Naive Bayes Classification - Cross Validation 3:1:1')
-    print('====================================================================================')
+def naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                     X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                     X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                     X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                     naive_bayes_validation_mode):
 
-    # get naive_bayes algorithm training results
-    nvb_train_score_dec, nvb_best_alpha_dec = naive_bayes_train_cross_validate(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec)
-    nvb_train_score_bin, nvb_best_alpha_bin = naive_bayes_train_cross_validate(X_train_bin, y_train_bin, X_valid_bin, y_valid_bin)
+    if naive_bayes_validation_mode == Config.ValidationMethod.CROSS_VALIDATION:
+        print('\n[2-1] Naive Bayes Classification - Cross Validation 3:1:1')
+        print('====================================================================================')
+        # get naive_bayes algorithm training results
+        nvb_train_score_dec, nvb_best_alpha_dec = naive_bayes_train_cross_validate(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec)
+        nvb_train_score_bin, nvb_best_alpha_bin = naive_bayes_train_cross_validate(X_train_bin, y_train_bin, X_valid_bin, y_valid_bin)
 
-    # printing the validation score of the naive_bayes training process
-    print('=> Decimal Features: (Naive Bayes Validation Score: ', nvb_train_score_dec, ')')
-    print('=> Binary Features:  (Naive Bayes Validation Score: ', nvb_train_score_bin, ')')
+        # get naive_bayes algorithm testing results
+        nvb_test_score_dec, nvb_test_cm_dec, nvb_test_mt_dec = naive_bayes_predict(nvb_best_alpha_dec, X_train_dec, y_train_dec, X_test_dec, y_test_dec)
+        nvb_test_score_bin, nvb_test_cm_bin, nvb_test_mt_bin = naive_bayes_predict(nvb_best_alpha_bin, X_train_bin, y_train_bin, X_test_bin, y_test_bin)
+    else:
+        print('\n[2-2] Naive Bayes Classification - k-fold Validation (k=', Config.CFG_NVB_K_FOLD, ')')
+        print('====================================================================================')
 
-    # get naive_bayes algorithm testing results
-    nvb_test_score_dec, nvb_test_cm_dec, nvb_test_mt_dec = naive_bayes_predict(nvb_best_alpha_dec, X_train_dec, y_train_dec, X_test_dec, y_test_dec)
-    nvb_test_score_bin, nvb_test_cm_bin, nvb_test_mt_bin = naive_bayes_predict(nvb_best_alpha_bin, X_train_bin, y_train_bin, X_test_bin, y_test_bin)
+        # get naive_bayes algorithm training results
+        nvb_train_score_dec, nvb_best_alpha_dec = naive_bayes_train_k_fold(X_labelled_dec, y_labelled_dec)
+        nvb_train_score_bin, nvb_best_alpha_bin = naive_bayes_train_k_fold(X_labelled_bin, y_labelled_bin)
 
-    print('=> Decimal Features: (Naive Bayes Testing Score: \t', nvb_test_score_dec, ')')
-    print('=> Binary Features:  (Naive Bayes Testing Score: \t', nvb_test_score_bin, ')')
-
-
-# ------------------------------------------------------------------------------------
-def naive_bayes_main_k_fold(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
-                            X_test_dec, y_test_dec, X_test_bin, y_test_bin):
-
-    print('\n[2-2] Naive Bayes Classification - k-fold Validation (k=', Config.CFG_NVB_K_FOLD, ')')
-    print('====================================================================================')
-
-    # get naive_bayes algorithm training results
-    nvb_train_score_dec, nvb_best_alpha_dec = naive_bayes_train_k_fold(X_labelled_dec, y_labelled_dec)
-    nvb_train_score_bin, nvb_best_alpha_bin = naive_bayes_train_k_fold(X_labelled_bin, y_labelled_bin)
+        # get naive_bayes algorithm testing results
+        nvb_test_score_dec, nvb_test_cm_dec, nvb_test_mt_dec = naive_bayes_predict(nvb_best_alpha_dec, X_labelled_dec, y_labelled_dec, X_test_dec, y_test_dec)
+        nvb_test_score_bin, nvb_test_cm_bin, nvb_test_mt_bin = naive_bayes_predict(nvb_best_alpha_bin, X_labelled_bin, y_labelled_bin, X_test_bin, y_test_bin)
 
     # printing the validation score of the naive_bayes training process
     print('=> Decimal Features: (Naive Bayes Validation Score: ', nvb_train_score_dec, ')')
     print('=> Binary Features:  (Naive Bayes Validation Score: ', nvb_train_score_bin, ')')
-
-    # get naive_bayes algorithm testing results
-    nvb_test_score_dec, nvb_test_cm_dec, nvb_test_mt_dec = naive_bayes_predict(nvb_best_alpha_dec, X_labelled_dec, y_labelled_dec, X_test_dec, y_test_dec)
-    nvb_test_score_bin, nvb_test_cm_bin, nvb_test_mt_bin = naive_bayes_predict(nvb_best_alpha_bin, X_labelled_bin, y_labelled_bin, X_test_bin, y_test_bin)
 
     print('=> Decimal Features: (Naive Bayes Testing Score: \t', nvb_test_score_dec, ')')
     print('=> Binary Features:  (Naive Bayes Testing Score: \t', nvb_test_score_bin, ')')

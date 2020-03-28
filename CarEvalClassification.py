@@ -47,24 +47,34 @@ def main():
     # ========================================================================================================
 
     # KNN classification with cross validation 3:1:1
-    KNNModel.knn_main_cross_validate(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
-                                     X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
-                                     X_test_dec, y_test_dec, X_test_bin, y_test_bin)
+    KNNModel.knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                      X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                      X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                      X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                      Config.ValidationMethod.CROSS_VALIDATION)
 
     # KNN classification with k-fold validation
-    KNNModel.knn_main_k_fold(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
-                            X_test_dec, y_test_dec, X_test_bin, y_test_bin)
+    KNNModel.knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                      X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                      X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                      X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                      Config.ValidationMethod.K_FOLD_VALIDATION)
 
     # ========================================================================================================
 
     # Naive Bayes classification with cross validation 3:1:1
-    NaiveBayesModel.naive_bayes_main_cross_validate(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
-                                                    X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
-                                                    X_test_dec, y_test_dec, X_test_bin, y_test_bin)
+    NaiveBayesModel.naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                                     X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                                     X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                                     X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                                     Config.ValidationMethod.CROSS_VALIDATION)
 
     # Naive Bayes classification with k-fold validation
-    NaiveBayesModel.naive_bayes_main_k_fold(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
-                                            X_test_dec, y_test_dec, X_test_bin, y_test_bin)
+    NaiveBayesModel.naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                                     X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                                     X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                                     X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                                     Config.ValidationMethod.K_FOLD_VALIDATION)
 
     # ========================================================================================================
 
