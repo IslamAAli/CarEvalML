@@ -34,7 +34,7 @@ def naive_bayes_train_k_fold(X_labelled, y_labelled):
     naive_bayes_best_score = 0
 
     m_alpha = 0
-    for i in range(Config.CFG_KNN_max_n):
+    for i in range(int(1/Config.CFG_NVB_ALPHA_STEP)):
         m_alpha = m_alpha + Config.CFG_NVB_ALPHA_STEP
         naive_bayes = MultinomialNB(alpha=m_alpha)
 
@@ -50,7 +50,7 @@ def naive_bayes_train_k_fold(X_labelled, y_labelled):
             naive_bayes.fit(X_train, y_train)
 
             if Config.CFG_debug == 1:
-                print('\nn= ', i + 1, " - KNN Score = ", naive_bayes.score(X_labelled, y_labelled))
+                print('\nn= ', i + 1, " - Naive Bayes Score = ", naive_bayes.score(X_labelled, y_labelled))
 
             itr_acc += naive_bayes.score(X_valid, y_valid)
 
