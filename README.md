@@ -17,6 +17,7 @@ Trials to explore the implementation details of different ML algorithms
 3) Decision Trees  
 4) Random Forest  
 5) SVM  
+6) CNN  
 
 ### Dataset 
 Car Evaluation Data Set  
