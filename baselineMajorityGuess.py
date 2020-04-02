@@ -12,5 +12,6 @@ def baseline_majority_guess(ds_data):
     print('1-> unacc, 2-> acc, 3-> good, 4->vgood')
     print(classes_data.value_counts())
     print('=> Baseline Accuracy = ', most_probable_class_count/total_sample)
+    Config.RES_BASE_LINE = most_probable_class_count/total_sample
 
     return

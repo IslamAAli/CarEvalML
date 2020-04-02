@@ -54,3 +54,8 @@ def rf_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
 
     print('=> Decimal Features: (Random Forest Testing Score: \t', rf_test_score_dec, ')')
     print('=> Binary Features:  (Random Forest Testing Score: \t', rf_test_score_bin, ')')
+
+    Config.RES_VAL_RAND_FOREST_DEC = rf_train_score_dec
+    Config.RES_TEST_RAND_FOREST_DEC = rf_test_score_dec
+    Config.RES_VAL_RAND_FOREST_BIN = rf_train_score_bin
+    Config.RES_TEST_RAND_FOREST_BIN = rf_test_score_bin

@@ -11,9 +11,7 @@ import KNNModel
 import NaiveBayesModel
 import DecisionTreeModel
 import RandomForestModel
-
-import numpy as np
-import pandas as pd
+import plottingManagement
 
 def main():
     warnings.filterwarnings('once')
@@ -49,7 +47,7 @@ def main():
 
     # ========================================================================================================
 
-    if Config.CFG_EN_KNN == 1:
+    if Config.CFG_EN_KNN_HOV == 1:
         # KNN classification with cross validation 3:1:1
         KNNModel.knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                           X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
@@ -57,6 +55,7 @@ def main():
                           X_test_dec, y_test_dec, X_test_bin, y_test_bin,
                           Config.ValidationMethod.CROSS_VALIDATION)
 
+    if Config.CFG_EN_NAIVE_BAYES_KFOLD==1:
         # KNN classification with k-fold validation
         KNNModel.knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                           X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
@@ -66,7 +65,7 @@ def main():
 
     # ========================================================================================================
 
-    if Config.CFG_EN_NAIVE_BAYES==1:
+    if Config.CFG_EN_NAIVE_BAYES_HOV==1:
         # Naive Bayes classification with cross validation 3:1:1
         NaiveBayesModel.naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                                          X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
@@ -74,6 +73,7 @@ def main():
                                          X_test_dec, y_test_dec, X_test_bin, y_test_bin,
                                          Config.ValidationMethod.CROSS_VALIDATION)
 
+    if Config.CFG_EN_NAIVE_BAYES_KFOLD==1:
         # Naive Bayes classification with k-fold validation
         NaiveBayesModel.naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                                          X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
@@ -83,20 +83,22 @@ def main():
 
     # ========================================================================================================
 
-    if Config.CFG_EN_DEC_TREE==1:
+    if Config.CFG_EN_DEC_TREE_KFOLD==1:
         # Decision Tree classification with cross validation 3:1:1
         DecisionTreeModel.dt_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
                                   X_test_dec, y_test_dec, X_test_bin, y_test_bin)
 
     # ========================================================================================================
 
-    if Config.CFG_EN_RAND_FOREST == 1:
+    if Config.CFG_EN_RAND_FOREST_KFOLD == 1:
         # Decision Tree classification with k-fold validation
         RandomForestModel.rf_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
                                   X_test_dec, y_test_dec, X_test_bin, y_test_bin)
 
     # ========================================================================================================
 
+    # plotting Results Summary
+    plottingManagement.plot_summary_table()
 
 if __name__ == "__main__":
     main()

@@ -110,3 +110,8 @@ def naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
 
     print('=> Decimal Features: (Naive Bayes Testing Score: \t', nvb_test_score_dec, ')')
     print('=> Binary Features:  (Naive Bayes Testing Score: \t', nvb_test_score_bin, ')')
+
+    Config.RES_VAL_NAIVE_BAYES_DEC = nvb_train_score_dec
+    Config.RES_TEST_NAIVE_BAYES_DEC = nvb_test_score_dec
+    Config.RES_VAL_NAIVE_BAYES_BIN = nvb_train_score_bin
+    Config.RES_TEST_NAIVE_BAYES_BIN = nvb_test_score_bin

@@ -104,3 +104,8 @@ def knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
 
     print('=> Decimal Features: (KNN Testing Score: \t', knn_test_score_dec, ')')
     print('=> Binary Features:  (KNN Testing Score: \t', knn_test_score_bin, ')')
+
+    Config.RES_VAL_KNN_DEC = knn_train_score_dec
+    Config.RES_TEST_KNN_DEC = knn_test_score_dec
+    Config.RES_VAL_KNN_BIN = knn_train_score_bin
+    Config.RES_TEST_KNN_BIN = knn_test_score_bin

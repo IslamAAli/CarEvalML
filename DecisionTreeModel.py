@@ -52,3 +52,8 @@ def dt_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
 
     print('=> Decimal Features: (Decision Tree Testing Score: \t', dt_test_score_dec, ')')
     print('=> Binary Features:  (Decision Tree Testing Score: \t', dt_test_score_bin, ')')
+
+    Config.RES_VAL_DEC_TREE_DEC = dt_train_score_dec
+    Config.RES_TEST_DEC_TREE_DEC = dt_test_score_dec
+    Config.RES_VAL_DEC_TREE_BIN = dt_train_score_bin
+    Config.RES_TEST_DEC_TREE_BIN = dt_test_score_bin
