@@ -107,7 +107,7 @@ def dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         print('\n[3-1] Decision Tree Classification - Cross Validation 3:1:1')
         print('====================================================================================')
 
-        # get KNN algorithm training results
+        # get Decision Tree algorithm training results
         dt_train_score_dec, \
         dt_best_criterion_dec, \
         dt_best_max_depth_dec, \
@@ -120,7 +120,7 @@ def dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         dt_best_min_samples_split_bin, \
         dt_best_min_samples_leaf_bin = dt_train_cross_validate(X_train_bin, y_train_bin, X_valid_bin, y_valid_bin)
 
-        # get KNN algorithm testing results
+        # get Decision Tree algorithm testing results
         dt_test_score_dec, dt_test_cm_dec, dt_test_mt_dec = dt_predict(dt_best_criterion_dec,
                                                                        dt_best_max_depth_dec,
                                                                        dt_best_min_samples_split_dec,
@@ -136,7 +136,7 @@ def dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         print('\n[3-2] Decision Tree Classification - k-fold Validation (k=', Config.CFG_DT_K_FOLD, ')')
         print('====================================================================================')
 
-        # get KNN algorithm training results
+        # get Decision Tree algorithm training results
         dt_train_score_dec, \
         dt_best_criterion_dec, \
         dt_best_max_depth_dec, \
@@ -149,7 +149,7 @@ def dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         dt_best_min_samples_split_bin, \
         dt_best_min_samples_leaf_bin = dt_train_k_fold(X_labelled_bin, y_labelled_bin)
 
-        # get KNN algorithm testing results
+        # get Decision Tree algorithm testing results
         dt_test_score_dec, dt_test_cm_dec, dt_test_mt_dec = dt_predict(dt_best_criterion_dec,
                                                                        dt_best_max_depth_dec,
                                                                        dt_best_min_samples_split_dec,
@@ -162,7 +162,7 @@ def dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                                                                        dt_best_min_samples_leaf_bin,
                                                                        X_labelled_bin, y_labelled_bin, X_test_bin, y_test_bin)
 
-    # printing the validation score of the KNN training process
+    # printing the validation score of the Decision Tree training process
     print('=> Decimal Features: (Decision Tree Validation Score: ', dt_train_score_dec, ')')
     print('=> Binary Features:  (Decision Tree Validation Score: ', dt_train_score_bin, ')')
 

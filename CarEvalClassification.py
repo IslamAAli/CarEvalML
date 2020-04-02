@@ -10,6 +10,7 @@ import baselineMajorityGuess
 import KNNModel
 import NaiveBayesModel
 import DecisionTreeModel
+import RandomForestModel
 
 import numpy as np
 import pandas as pd
@@ -88,6 +89,22 @@ def main():
 
     # Decision Tree classification with k-fold validation
     DecisionTreeModel.dt_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                              X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                              X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                              X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                              Config.ValidationMethod.K_FOLD_VALIDATION)
+
+    # ========================================================================================================
+
+    # Decision Tree classification with cross validation 3:1:1
+    RandomForestModel.rf_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
+                              X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
+                              X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                              X_test_dec, y_test_dec, X_test_bin, y_test_bin,
+                              Config.ValidationMethod.CROSS_VALIDATION)
+
+    # Decision Tree classification with k-fold validation
+    RandomForestModel.rf_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
                               X_train_bin, y_train_bin, X_valid_bin, y_valid_bin,
                               X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
                               X_test_dec, y_test_dec, X_test_bin, y_test_bin,
