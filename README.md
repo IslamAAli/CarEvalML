@@ -6,9 +6,9 @@ Trials to explore the implementation details of different ML algorithms
 
 ### Tools
 - Python 3.8.1  
-- sklearn (ver)  
-- numpy (ver)  
-- pandas (ver)  
+- sklearn 0.22.1  
+- numpy 1.18.1  
+- pandas 1.0.3  
 
 ### Methods Explored
 0) Majority Guess  
@@ -17,6 +17,7 @@ Trials to explore the implementation details of different ML algorithms
 3) Decision Trees  
 4) Random Forest  
 5) SVM  
+6) CNN  
 
 ### Dataset 
 Car Evaluation Data Set  
