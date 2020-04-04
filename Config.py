@@ -9,6 +9,7 @@ CFG_EN_NAIVE_BAYES_HOV      = 0
 CFG_EN_NAIVE_BAYES_KFOLD    = 1
 CFG_EN_DEC_TREE_KFOLD       = 1
 CFG_EN_RAND_FOREST_KFOLD    = 1
+CFG_EN_SVM_KFOLD            = 1
 
 # validation and testing results variables
 RES_BASE_LINE   = 0
@@ -17,19 +18,25 @@ RES_VAL_KNN_DEC         = 0
 RES_VAL_NAIVE_BAYES_DEC = 0
 RES_VAL_DEC_TREE_DEC    = 0
 RES_VAL_RAND_FOREST_DEC = 0
+RES_VAL_SVM_DEC         = 0
+
 RES_VAL_KNN_BIN         = 0
 RES_VAL_NAIVE_BAYES_BIN = 0
 RES_VAL_DEC_TREE_BIN    = 0
 RES_VAL_RAND_FOREST_BIN = 0
+RES_VAL_SVM_BIN         = 0
 
 RES_TEST_KNN_DEC         = 0
 RES_TEST_NAIVE_BAYES_DEC = 0
 RES_TEST_DEC_TREE_DEC    = 0
 RES_TEST_RAND_FOREST_DEC = 0
+RES_TEST_SVM_DEC         = 0
+
 RES_TEST_KNN_BIN         = 0
 RES_TEST_NAIVE_BAYES_BIN = 0
 RES_TEST_DEC_TREE_BIN    = 0
 RES_TEST_RAND_FOREST_BIN = 0
+RES_TEST_SVM_BIN         = 0
 
 # debugging configuration
 CFG_debug       = 0
@@ -58,6 +65,12 @@ CFG_RF_MIN_LEAF     = np.arange(1,10)
 CFG_RF_MIN_SPLIT    = np.arange(2,10)
 CFG_RF_K_FOLD       = 5
 
+# SVM Config.
+CFG_SVM_C           = [0.001, 0.003, 0.005, 0.01, 0.03, 0.05, 0.1, 0.3, 0.5, 1, 3, 5, 10, 30, 50, 100]
+CFG_SVM_KERNEL      = ['linear', 'poly', 'rbf', 'sigmoid']
+CFG_SVM_DEGREE      = np.arange(1,10)
+CFG_SVM_GAMMA       = ['scale', 'auto', 0.001, 0.003, 0.005, 0.01, 0.03, 0.05, 0.1, 0.3, 0.5, 1, 3, 5, 10, 30, 50, 100]
+CFG_SVM_K_FOLD      = 5
 
 class ValidationMethod(Enum):
     CROSS_VALIDATION    = 1

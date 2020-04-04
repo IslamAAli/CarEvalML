@@ -24,7 +24,7 @@ def plot_summary_table():
         ['2', 'Naive Bayes', Config.RES_VAL_NAIVE_BAYES_DEC, Config.RES_TEST_NAIVE_BAYES_DEC, Config.RES_VAL_NAIVE_BAYES_BIN, Config.RES_TEST_NAIVE_BAYES_BIN],
         ['3', 'Decision Tree', Config.RES_VAL_DEC_TREE_DEC, Config.RES_TEST_DEC_TREE_DEC, Config.RES_VAL_DEC_TREE_BIN, Config.RES_TEST_DEC_TREE_BIN],
         ['4', 'Random Forest', Config.RES_VAL_RAND_FOREST_DEC, Config.RES_TEST_RAND_FOREST_DEC, Config.RES_VAL_RAND_FOREST_BIN, Config.RES_TEST_RAND_FOREST_BIN],
-        ['5', 'SVM', 0, 0, 0, 0],
+        ['5', 'SVM', Config.RES_VAL_SVM_DEC, Config.RES_TEST_SVM_DEC, Config.RES_VAL_SVM_BIN, Config.RES_TEST_SVM_BIN],
         ['6', 'CNN', 0, 0, 0, 0],
     ]
     table = AsciiTable(table_data)

@@ -11,6 +11,7 @@ import KNNModel
 import NaiveBayesModel
 import DecisionTreeModel
 import RandomForestModel
+import SVMModel
 import plottingManagement
 
 def main():
@@ -94,6 +95,13 @@ def main():
         # Decision Tree classification with k-fold validation
         RandomForestModel.rf_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
                                   X_test_dec, y_test_dec, X_test_bin, y_test_bin)
+
+    # ========================================================================================================
+
+    if Config.CFG_EN_SVM_KFOLD == 1:
+        # Decision Tree classification with k-fold validation
+        SVMModel.svm_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
+                          X_test_dec, y_test_dec, X_test_bin, y_test_bin)
 
     # ========================================================================================================
 
