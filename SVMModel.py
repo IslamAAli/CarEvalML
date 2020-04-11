@@ -4,6 +4,7 @@ from sklearn.metrics import confusion_matrix,classification_report
 from sklearn import metrics
 
 import Config
+import plottingManagement
 
 # ------------------------------------------------------------------------------------
 def svm_train(X_labelled, y_labelled):
@@ -52,6 +53,14 @@ def svm_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
 
     print('=> Decimal Features: (SVM Testing Score: \t', svm_test_score_dec, ')')
     print('=> Binary Features:  (SVM Testing Score: \t', svm_test_score_bin, ')')
+
+    # draw confusion matrix and print the metrics
+    print('==> Decimal Features: SVM performance')
+    print(svm_test_mt_dec)
+    print('==> Binary Features: SVM performance')
+    print(svm_test_mt_bin)
+    plottingManagement.plot_confusion_matrix(svm_test_cm_dec, 'SVM Decimal Case')
+    plottingManagement.plot_confusion_matrix(svm_test_cm_bin, 'SVM Binary Case')
 
     Config.RES_VAL_SVM_DEC = svm_train_score_dec
     Config.RES_TEST_SVM_DEC = svm_test_score_dec

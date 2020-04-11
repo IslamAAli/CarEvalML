@@ -106,7 +106,7 @@ def main():
     # ========================================================================================================
 
     # plotting Results Summary
-    plottingManagement.plot_summary_table()
+    plottingManagement.print_summary_table()
 
 if __name__ == "__main__":
     main()

@@ -4,6 +4,7 @@ from sklearn.metrics import confusion_matrix,classification_report
 from sklearn import metrics
 
 import Config
+import plottingManagement
 
 # ------------------------------------------------------------------------------------
 def rf_train(X_labelled, y_labelled):
@@ -54,6 +55,14 @@ def rf_main(X_labelled_dec, y_labelled_dec, X_labelled_bin, y_labelled_bin,
 
     print('=> Decimal Features: (Random Forest Testing Score: \t', rf_test_score_dec, ')')
     print('=> Binary Features:  (Random Forest Testing Score: \t', rf_test_score_bin, ')')
+
+    # draw confusion matrix and print the metrics
+    print('==> Decimal Features: Random Forest performance')
+    print(rf_test_mt_dec)
+    print('==> Binary Features: Random Forest performance')
+    print(rf_test_mt_bin)
+    plottingManagement.plot_confusion_matrix(rf_test_cm_dec, 'Random Forest Decimal Case')
+    plottingManagement.plot_confusion_matrix(rf_test_cm_bin, 'Random Forest Binary Case')
 
     Config.RES_VAL_RAND_FOREST_DEC = rf_train_score_dec
     Config.RES_TEST_RAND_FOREST_DEC = rf_test_score_dec

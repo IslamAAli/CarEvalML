@@ -1,0 +1,11 @@
+\begin{table}[H]
+\centering
+\begin{tabularx}{0.8\textwidth}{l|X|X}
+\hline
+\textbf{Hyperparameter} & \multicolumn{1}{c|}{\textbf{Definition}}        & \multicolumn{1}{c}{\textbf{Tuning Technique}}                                                                                 \\ \hline
+C                       & Regularization parameter, strictly positive     & Random search in the range \{0.001, 0.003, 0.005, 0.01, 0.03, 0.05, 0.1, 0.3, 0.5, 1, 3, 5, 10, 30, 50, 100\}                  \\ \hline
+kernel                  & The kernel to be used with SVM                  & Random search in the range \{'linear', 'poly', 'rbf', 'sigmoid'\}                                                              \\ \hline
+degree                  & Polynomial degree for 'poly' kernel             & Random search in the range from 1 to 10 with a step = 1                                                                        \\ \hline
+gamma                   & Kernel coefficient for 'poly', 'rbf', 'sigmoid' & Random search in the range \{'scale', 'auto', 0.001, 0.003, 0.005, 0.01, 0.03, 0.05, 0.1, 0.3, 0.5, 1, 3, 5, 10, 30, 50, 100\} \\ \hline
+\end{tabularx}
+\end{table}

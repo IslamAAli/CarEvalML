@@ -111,6 +111,15 @@ def naive_bayes_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
     print('=> Decimal Features: (Naive Bayes Testing Score: \t', nvb_test_score_dec, ')')
     print('=> Binary Features:  (Naive Bayes Testing Score: \t', nvb_test_score_bin, ')')
 
+    # draw confusion matrix and print the metrics
+    print('==> Decimal Features: Naive Bayes performance')
+    print(nvb_test_mt_dec)
+    print('==> Binary Features: Naive Bayes performance')
+    print(nvb_test_mt_bin)
+    plottingManagement.plot_confusion_matrix(nvb_test_cm_dec, 'Naive Bayes Decimal Case')
+    plottingManagement.plot_confusion_matrix(nvb_test_cm_bin, 'Naive Bayes Binary Case')
+
+
     Config.RES_VAL_NAIVE_BAYES_DEC = nvb_train_score_dec
     Config.RES_TEST_NAIVE_BAYES_DEC = nvb_test_score_dec
     Config.RES_VAL_NAIVE_BAYES_BIN = nvb_train_score_bin

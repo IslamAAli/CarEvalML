@@ -87,6 +87,8 @@ def knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
         # get KNN algorithm testing results
         knn_test_score_dec, knn_test_cm_dec, knn_test_mt_dec = knn_predict(knn_best_n_neighbors_dec, X_train_dec,y_train_dec, X_test_dec, y_test_dec)
         knn_test_score_bin, knn_test_cm_bin, knn_test_mt_bin = knn_predict(knn_best_n_neighbors_bin, X_train_bin, y_train_bin, X_test_bin, y_test_bin)
+
+
     else:
         print('\n[1-2] K-Nearest Neighbor Classification - k-fold Validation (k=', Config.CFG_KNN_K_FOLD, ')')
         print('====================================================================================')
@@ -104,6 +106,15 @@ def knn_main(X_train_dec, y_train_dec, X_valid_dec, y_valid_dec,
 
     print('=> Decimal Features: (KNN Testing Score: \t', knn_test_score_dec, ')')
     print('=> Binary Features:  (KNN Testing Score: \t', knn_test_score_bin, ')')
+
+    # draw confusion matrix and print the metrics
+    print('==> Decimal Features: KNN performance')
+    print(knn_test_mt_dec)
+    print('==> Binary Features: KNN performance')
+    print(knn_test_mt_bin)
+    plottingManagement.plot_confusion_matrix(knn_test_cm_dec, 'KNN Decimal Case')
+    plottingManagement.plot_confusion_matrix(knn_test_cm_bin, 'KNN Binary Case')
+
 
     Config.RES_VAL_KNN_DEC = knn_train_score_dec
     Config.RES_TEST_KNN_DEC = knn_test_score_dec

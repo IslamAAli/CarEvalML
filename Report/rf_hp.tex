@@ -1,0 +1,13 @@
+\begin{table}[H]
+\centering
+\begin{tabularx}{0.8\textwidth}{l|X|X}
+\hline
+\textbf{Hyperparameter} & \multicolumn{1}{c|}{\textbf{Definition}}              & \multicolumn{1}{c}{\textbf{Tuning Technique}}                             \\ \hline
+criterion               & The function used to measure the quality of the split & Random search in the range \{'gini', 'entropy'\}                           \\ \hline
+max\_depth              & The maximum depth of the tree                         & Random search in the range \{None, 1, 5, 10, 30, 50, 100, 300, 500, 1000\} \\ \hline
+n\_estimators           & The number of trees to present in the forest          & Random search in the range \{10, 30, 50, 100, 500, 1000\}                  \\ \hline
+max\_features           & The number of features to consider when splitting     & Random search in the range \{'auto', 'sqrt', 'log2', None\}                \\ \hline
+min\_samples\_split     & The minimum number of samples needed to split a node  & Random search in the range from 2 to 10 with an step = 1                   \\ \hline
+min\_samples\_leaf      & The minimum samples required to form a leaf node      & Random search in the range from 1 to 10 with a step = 1                    \\ \hline
+\end{tabularx}
+\end{table}
