@@ -60,6 +60,9 @@ def naive_bayes_train_k_fold(X_labelled, y_labelled):
             naive_bayes_best_score = naive_bayes.score(X_valid, y_valid)
             naive_bayes_best_alpha = m_alpha
 
+    print('**==> Naive Bayes Hyperparameters')
+    print('alpha=', naive_bayes_best_alpha)
+
     return naive_bayes_best_score, naive_bayes_best_alpha
 
 # ------------------------------------------------------------------------------------

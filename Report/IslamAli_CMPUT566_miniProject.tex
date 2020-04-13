@@ -25,6 +25,7 @@
 \usepackage{bbold}
 \usepackage{tabularx}
 \usepackage{mathtools}
+\usepackage{multirow}
 
 
 \pagestyle{fancy}
@@ -136,8 +137,13 @@ SVM is a classification algorithm that aims at finding the best hyperplane to se
 % ==========================================================================
 \newpage
 \section{Results and Discussion}
-In this section, the experimental results of the 5 algorithms are provided with discussion of the findings. The results include reporting of the accuracy, precision, recall, F1-measure, and the confusion matrix. 
+In this section, the experimental results of the 5 algorithms are provided with discussion of the findings. The results include reporting of the accuracy, precision, recall, F1-measure, and the confusion matrix. \textbf{\textit{An important point to mention is that due to the random search in the hyperparameter space, the results may change a bit from run to run. Therefore, I attached to the project deliverable folder two output logs on which these report conclusions where based on.}}
 
+\subsection{Hyperparameters Tuning Results}
+The following are the tuning results showing the values selected for the hyperparameters. For the Naive Bayes, and the KNN, the tuning was done using exhaustive search, while in the rest of the algorithms, the tuning was done using random search over a range of values for each 
+\input{hyperparameters_res.tex}
+
+\newpage
 \subsection{Accuracy}
 In terms of accuracy, one can observe two main points. The first one is the superiority of the SVM classifier when compared to others, and the better performance resulting from using binary features rather than decimal features except for the KNN classifier. \\
 \indent We can also observe that Naive Bayes was held behind when compared to all other classifiers. The superiority of the SVM can be due to the fine tuning of the hyperparameters with usage of kernels. Also, this fine tuning can result in a guarding margin that can avoid mis-classification. The problem with Naive Bayes is obviously due to the main assumption of features independence upon which the whole algorithm intuition is based on. This assumption may not be valid in a wide range of problems and this data set is no difference. Another point to note, is the close performance we get from Decision Tree and Random Forest, regardless of the existence of extra classification advantage for the Random Forest which is having more trees/estimators available. This may be due to the nature of the data set and the fact that the extra estimators acted as redundant estimators with no much added value. \\

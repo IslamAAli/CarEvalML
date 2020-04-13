@@ -14,7 +14,8 @@
 \BOOKMARK [2][-]{subsection.4.4}{Random Forest}{section.4}% 14
 \BOOKMARK [2][-]{subsection.4.5}{Support Vector Machines \(SVM\)}{section.4}% 15
 \BOOKMARK [1][-]{section.5}{Results and Discussion}{}% 16
-\BOOKMARK [2][-]{subsection.5.1}{Accuracy}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.2}{Precision, Recall, and F1-Measure}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.3}{Confusion Matrix}{section.5}% 19
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 20
+\BOOKMARK [2][-]{subsection.5.1}{Hyperparameters Tuning Results}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.2}{Accuracy}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.3}{Precision, Recall, and F1-Measure}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.4}{Confusion Matrix}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 21

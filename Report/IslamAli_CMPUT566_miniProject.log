@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.26)  13 APR 2020 00:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.26)  13 APR 2020 01:23
 entering extended mode
 **./IslamAli_CMPUT566_miniProject.tex
 (IslamAli_CMPUT566_miniProject.tex
@@ -1074,23 +1074,30 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \xmathstrut@box=\box84
 \xmathstrut@dim=\dimen306
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip73
+\multirow@cntb=\count316
+\multirow@dima=\skip74
+\bigstrutjot=\dimen307
+)
 (IslamAli_CMPUT566_miniProject.aux)
 \openout1 = `IslamAli_CMPUT566_miniProject.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1128,26 +1135,26 @@ LaTeX Font Info:    ... okay on input line 38.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count316
-\scratchdimen=\dimen307
+\scratchcounter=\count317
+\scratchdimen=\dimen308
 \scratchbox=\box85
-\nofMPsegments=\count317
-\nofMParguments=\count318
+\nofMPsegments=\count318
+\nofMParguments=\count319
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count319
-\MPscratchDim=\dimen308
-\MPnumerator=\count320
-\makeMPintoPDFobject=\count321
+\MPscratchCnt=\count320
+\MPscratchDim=\dimen309
+\MPnumerator=\count321
+\makeMPintoPDFobject=\count322
 \everyMPtoPDFconversion=\toks51
 ) ABD: EveryShipout initializing macros
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 38.
+ on input line 39.
 
 \AtBeginShipoutBox=\box86
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 39.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -1157,11 +1164,11 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count322
+\c@section@level=\count323
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 39.
+LaTeX Info: Redefining \pageref on input line 39.
+LaTeX Info: Redefining \nameref on input line 39.
 
 (IslamAli_CMPUT566_miniProject.out) (IslamAli_CMPUT566_miniProject.out)
 \@outlinefile=\write4
@@ -1170,13 +1177,13 @@ LaTeX Info: Redefining \nameref on input line 38.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 64.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 64.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -1184,17 +1191,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (dataset_details_table.tex)
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 7
-3.
+4.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/bbold\ubbold.fd") [1{C:/Users/redth/App
 Data/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ] (decimal_features_table.tex)
 (decimal_labels_table.tex)
-<../Figures/baseline_bar.png, id=103, 421.575pt x 316.18124pt>
+<../Figures/baseline_bar.png, id=107, 421.575pt x 316.18124pt>
 File: ../Figures/baseline_bar.png Graphic file (type png)
 <use ../Figures/baseline_bar.png>
-Package pdftex.def Info: ../Figures/baseline_bar.png  used on input line 101.
+Package pdftex.def Info: ../Figures/baseline_bar.png  used on input line 102.
 (pdftex.def)             Requested size: 328.82707pt x 246.6252pt.
  [2] (nvb_hp.tex) [3 <../Figures/baseline_bar.png (PNG copy)>] (knn_hp.tex) (dt
 _hp.tex
@@ -1243,62 +1250,62 @@ Underfull \hbox (badness 1540) in paragraph at lines 10--10
 \OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 0.001, 0.003, 0.005, 0.01,
  []
 
-) [5]
-<../Figures/accuracy.png, id=138, 801.74532pt x 467.49657pt>
+) [5] (hyperparameters_res.tex) [6]
+<../Figures/accuracy.png, id=148, 801.74532pt x 467.49657pt>
 File: ../Figures/accuracy.png Graphic file (type png)
 <use ../Figures/accuracy.png>
-Package pdftex.def Info: ../Figures/accuracy.png  used on input line 147.
+Package pdftex.def Info: ../Figures/accuracy.png  used on input line 153.
 (pdftex.def)             Requested size: 469.75502pt x 273.91595pt.
-<../Figures/precision.png, id=140, 810.77907pt x 467.49657pt>
+<../Figures/precision.png, id=150, 810.77907pt x 467.49657pt>
 File: ../Figures/precision.png Graphic file (type png)
 <use ../Figures/precision.png>
-Package pdftex.def Info: ../Figures/precision.png  used on input line 157.
+Package pdftex.def Info: ../Figures/precision.png  used on input line 163.
 (pdftex.def)             Requested size: 469.75502pt x 270.87pt.
- [6 <../Figures/accuracy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 161--162
+ [7 <../Figures/accuracy.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<../Figures/recall.png, id=147, 806.26219pt x 472.01344pt>
+<../Figures/recall.png, id=158, 806.26219pt x 472.01344pt>
 File: ../Figures/recall.png Graphic file (type png)
 <use ../Figures/recall.png>
-Package pdftex.def Info: ../Figures/recall.png  used on input line 168.
+Package pdftex.def Info: ../Figures/recall.png  used on input line 174.
 (pdftex.def)             Requested size: 469.75502pt x 275.01399pt.
-[7 <../Figures/precision.png>]
-<../Figures/f1.png, id=155, 804.75656pt x 469.00218pt>
+[8 <../Figures/precision.png>]
+<../Figures/f1.png, id=165, 804.75656pt x 469.00218pt>
 File: ../Figures/f1.png Graphic file (type png)
 <use ../Figures/f1.png>
-Package pdftex.def Info: ../Figures/f1.png  used on input line 174.
+Package pdftex.def Info: ../Figures/f1.png  used on input line 180.
 (pdftex.def)             Requested size: 469.75502pt x 273.76761pt.
  (conf_mat.tex
-<../Figures/Naive Bayes Decimal Case_conf_mat.png, id=156, 462.528pt x 346.896p
+<../Figures/Naive Bayes Decimal Case_conf_mat.png, id=166, 462.528pt x 346.896p
 t>
 File: ../Figures/Naive Bayes Decimal Case_conf_mat.png Graphic file (type png)
 <use ../Figures/Naive Bayes Decimal Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/Naive Bayes Decimal Case_conf_mat.png  used
  on input line 6.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/Naive Bayes Binary Case_conf_mat.png, id=157, 462.528pt x 346.896pt
+<../Figures/Naive Bayes Binary Case_conf_mat.png, id=167, 462.528pt x 346.896pt
 >
 File: ../Figures/Naive Bayes Binary Case_conf_mat.png Graphic file (type png)
 <use ../Figures/Naive Bayes Binary Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/Naive Bayes Binary Case_conf_mat.png  used 
 on input line 12.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
- [8 <../Figures/recall.png> <../Figures/f1.png>]
-<../Figures/KNN Decimal Case_conf_mat.png, id=166, 462.528pt x 346.896pt>
+ [9 <../Figures/recall.png> <../Figures/f1.png>]
+<../Figures/KNN Decimal Case_conf_mat.png, id=176, 462.528pt x 346.896pt>
 File: ../Figures/KNN Decimal Case_conf_mat.png Graphic file (type png)
 <use ../Figures/KNN Decimal Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/KNN Decimal Case_conf_mat.png  used on inpu
 t line 24.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/KNN Binary Case_conf_mat.png, id=167, 462.528pt x 346.896pt>
+<../Figures/KNN Binary Case_conf_mat.png, id=177, 462.528pt x 346.896pt>
 File: ../Figures/KNN Binary Case_conf_mat.png Graphic file (type png)
 <use ../Figures/KNN Binary Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/KNN Binary Case_conf_mat.png  used on input
  line 30.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/Decision Tree Decimal Case_conf_mat.png, id=168, 462.528pt x 346.89
+<../Figures/Decision Tree Decimal Case_conf_mat.png, id=178, 462.528pt x 346.89
 6pt>
 File: ../Figures/Decision Tree Decimal Case_conf_mat.png Graphic file (type png
 )
@@ -1306,7 +1313,7 @@ File: ../Figures/Decision Tree Decimal Case_conf_mat.png Graphic file (type png
 Package pdftex.def Info: ../Figures/Decision Tree Decimal Case_conf_mat.png  us
 ed on input line 42.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/Decision Tree Binary Case_conf_mat.png, id=169, 462.528pt x 346.896
+<../Figures/Decision Tree Binary Case_conf_mat.png, id=179, 462.528pt x 346.896
 pt>
 File: ../Figures/Decision Tree Binary Case_conf_mat.png Graphic file (type png)
 
@@ -1314,7 +1321,7 @@ File: ../Figures/Decision Tree Binary Case_conf_mat.png Graphic file (type png)
 Package pdftex.def Info: ../Figures/Decision Tree Binary Case_conf_mat.png  use
 d on input line 48.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/Random Forest Decimal Case_conf_mat.png, id=170, 462.528pt x 346.89
+<../Figures/Random Forest Decimal Case_conf_mat.png, id=180, 462.528pt x 346.89
 6pt>
 File: ../Figures/Random Forest Decimal Case_conf_mat.png Graphic file (type png
 )
@@ -1322,7 +1329,7 @@ File: ../Figures/Random Forest Decimal Case_conf_mat.png Graphic file (type png
 Package pdftex.def Info: ../Figures/Random Forest Decimal Case_conf_mat.png  us
 ed on input line 60.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/Random Forest Binary Case_conf_mat.png, id=171, 462.528pt x 346.896
+<../Figures/Random Forest Binary Case_conf_mat.png, id=181, 462.528pt x 346.896
 pt>
 File: ../Figures/Random Forest Binary Case_conf_mat.png Graphic file (type png)
 
@@ -1330,59 +1337,60 @@ File: ../Figures/Random Forest Binary Case_conf_mat.png Graphic file (type png)
 Package pdftex.def Info: ../Figures/Random Forest Binary Case_conf_mat.png  use
 d on input line 66.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
- [9 <../Figures/Naive Bayes Decimal Case_conf_mat.png> <../Figures/Naive Bayes 
-Binary Case_conf_mat.png> <../Figures/KNN Decimal Case_conf_mat.png> <../Figure
-s/KNN Binary Case_conf_mat.png> <../Figures/Decision Tree Decimal Case_conf_mat
-.png> <../Figures/Decision Tree Binary Case_conf_mat.png>]
-<../Figures/SVM Decimal Case_conf_mat.png, id=186, 462.528pt x 346.896pt>
+ [10 <../Figures/Naive Bayes Decimal Case_conf_mat.png> <../Figures/Naive Bayes
+ Binary Case_conf_mat.png> <../Figures/KNN Decimal Case_conf_mat.png> <../Figur
+es/KNN Binary Case_conf_mat.png> <../Figures/Decision Tree Decimal Case_conf_ma
+t.png> <../Figures/Decision Tree Binary Case_conf_mat.png>]
+<../Figures/SVM Decimal Case_conf_mat.png, id=196, 462.528pt x 346.896pt>
 File: ../Figures/SVM Decimal Case_conf_mat.png Graphic file (type png)
 <use ../Figures/SVM Decimal Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/SVM Decimal Case_conf_mat.png  used on inpu
 t line 78.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
-<../Figures/SVM Binary Case_conf_mat.png, id=187, 462.528pt x 346.896pt>
+<../Figures/SVM Binary Case_conf_mat.png, id=197, 462.528pt x 346.896pt>
 File: ../Figures/SVM Binary Case_conf_mat.png Graphic file (type png)
 <use ../Figures/SVM Binary Case_conf_mat.png>
 Package pdftex.def Info: ../Figures/SVM Binary Case_conf_mat.png  used on input
  line 84.
 (pdftex.def)             Requested size: 164.41711pt x 123.31567pt.
 )
-[10 <../Figures/Random Forest Decimal Case_conf_mat.png> <../Figures/Random For
+[11 <../Figures/Random Forest Decimal Case_conf_mat.png> <../Figures/Random For
 est Binary Case_conf_mat.png> <../Figures/SVM Decimal Case_conf_mat.png> <../Fi
 gures/SVM Binary Case_conf_mat.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 188.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 188.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
  (IslamAli_CMPUT566_miniProject.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 188.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 188.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `IslamAli_CMPUT566_miniProject.out' has not c
 hanged.
-(rerunfilecheck)             Checksum: 8FCD4ED6C33DC9688CAAB483412D7C5C;1346.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 188.
+(rerunfilecheck)             Checksum: 4E0631B4B0385007652DCCFE6E9B6F74;1426.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  ) 
 Here is how much of TeX's memory you used:
- 40938 strings out of 492484
- 932775 string characters out of 3131051
- 1186110 words of memory out of 3000000
- 44598 multiletter control sequences out of 15000+200000
- 539861 words of font info for 54 fonts, out of 3000000 for 9000
+ 41001 strings out of 492484
+ 933826 string characters out of 3131051
+ 1189692 words of memory out of 3000000
+ 44650 multiletter control sequences out of 15000+200000
+ 540220 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,98p,1576b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,18n,98p,1576b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\redth\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/public/bbold/dpi600
 \bbold10.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on IslamAli_CMPUT566_miniProject.pdf (10 pages, 466876 bytes).
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on IslamAli_CMPUT566_miniProject.pdf (11 pages, 485151 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 248 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 256 words of extra memory for PDF output out of 10000 (max. 10000000)
 

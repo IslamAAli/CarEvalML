@@ -20,6 +20,9 @@ def rf_train(X_labelled, y_labelled):
     clf = RandomizedSearchCV(rf, rf_parameters, cv=None, n_jobs=3, refit=True)
     clf.fit(X_labelled, y_labelled)
 
+    print('**==> Random Forest Hyperparameters')
+    print(clf.best_params_)
+
     return clf.best_estimator_, clf.best_score_
 
 # ------------------------------------------------------------------------------------

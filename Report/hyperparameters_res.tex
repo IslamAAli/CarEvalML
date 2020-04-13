@@ -1,0 +1,19 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+\centering
+\begin{tabularx}{0.90\textwidth}{l|l|l|X}
+\hline
+\textbf{}                   & \textbf{Classification Algorithm} & \textbf{Features} & \textbf{Tuning Parameters}                                                                                                                                                               \\ \hline
+\multirow{2}{*}{\textbf{1}} & \multirow{2}{*}{Naive Bayes}      & Decimal           & alpha = 1                                                                                                                                                                                \\ \cline{3-4} 
+                            &                                   & Binary            & alpha = 1                                                                                                                                                                                \\ \hline
+\multirow{2}{*}{\textbf{2}} & \multirow{2}{*}{KNN}              & Decimal           & n = 3                                                                                                                                                                                    \\ \cline{3-4} 
+                            &                                   & Binary            & n = 10                                                                                                                                                                                   \\ \hline
+\multirow{2}{*}{\textbf{3}} & \multirow{2}{*}{Decision Tree}    & Decimal           & \begin{tabular}[c]{@{}l@{}}min\_samples\_split: 5\\ min\_samples\_leaf: 1\\ max\_depth: 10\\ criterion: gini\end{tabular}                                                      \\ \cline{3-4} 
+                            &                                   & Binary            & \begin{tabular}[c]{@{}l@{}}min\_samples\_split: 5\\ min\_samples\_leaf: 3\\ max\_depth: 100\\ criterion: entropy\end{tabular}                                                  \\ \hline
+\multirow{2}{*}{\textbf{4}} & \multirow{2}{*}{Random Forest}    & Decimal           & \begin{tabular}[c]{@{}l@{}}n\_estimators: 500\\ min\_samples\_split: 6\\ min\_samples\_leaf: 6\\ max\_features: auto\\ max\_depth: 500\\ criterion: entropy\end{tabular} \\ \cline{3-4} 
+                            &                                   & Binary            & \begin{tabular}[c]{@{}l@{}}n\_estimators: 1000\\ min\_samples\_split: 2\\ min\_samples\_leaf: 1\\ max\_features: None\\ max\_depth: 100\\ criterion: gini\end{tabular}     \\ \hline
+\multirow{2}{*}{\textbf{5}} & \multirow{2}{*}{SVM}              & Decimal           & \begin{tabular}[c]{@{}l@{}}kernel: rbf\\ gamma: 0.3\\ degree: 7\\ C: 100\end{tabular}                                                                                          \\ \cline{3-4} 
+                            &                                   & Binary            & \begin{tabular}[c]{@{}l@{}}kernel: poly\\ gamma: 10\\ degree: 6\\ C: 0.03\end{tabular}                                                                                           \\ \hline
+\end{tabularx}
+\end{table}

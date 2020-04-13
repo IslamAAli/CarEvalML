@@ -18,6 +18,9 @@ def svm_train(X_labelled, y_labelled):
     clf = RandomizedSearchCV(svm, svm_parameters, cv=None, n_jobs=-1, refit=True)
     clf.fit(X_labelled, y_labelled)
 
+    print('**==> SVM Hyperparameters')
+    print(clf.best_params_)
+
     return clf.best_estimator_, clf.best_score_
 
 # ------------------------------------------------------------------------------------

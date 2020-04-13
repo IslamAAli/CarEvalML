@@ -10,6 +10,10 @@ Name: car_class, dtype: int64
 
 [1-2] K-Nearest Neighbor Classification - k-fold Validation (k= 5 )
 ====================================================================================
+**==> KNN Hyperparameters
+n= 3
+**==> KNN Hyperparameters
+n= 10
 => Decimal Features: (KNN Validation Score:  0.9391906032543295  - n=  3 )
 => Binary Features:  (KNN Validation Score:  0.9117066917804635  - n=  10 )
 => Decimal Features: (KNN Testing Score: 	 0.9479768786127167 )
@@ -41,6 +45,10 @@ weighted avg       0.89      0.89      0.88       346
 
 [2-2] Naive Bayes Classification - k-fold Validation (k= 5 )
 ====================================================================================
+**==> Naive Bayes Hyperparameters
+alpha= 0.9999999999999999
+**==> Naive Bayes Hyperparameters
+alpha= 0.9999999999999999
 => Decimal Features: (Naive Bayes Validation Score:  0.6376811594202898 )
 => Binary Features:  (Naive Bayes Validation Score:  0.8115942028985508 )
 => Decimal Features: (Naive Bayes Testing Score: 	 0.6734104046242775 )
@@ -72,95 +80,107 @@ weighted avg       0.81      0.82      0.80       346
 
 [3] Decision Tree Classification - k-fold Validation (k= 5 )
 ====================================================================================
-=> Decimal Features: (Decision Tree Validation Score:  0.9645424580128708 )
-=> Binary Features:  (Decision Tree Validation Score:  0.9602050960079527 )
-=> Decimal Features: (Decision Tree Testing Score: 	 0.953757225433526 )
-=> Binary Features:  (Decision Tree Testing Score: 	 0.9479768786127167 )
+**==> Decision Tree Hyperparameters
+{'min_samples_split': 9, 'min_samples_leaf': 5, 'max_depth': None, 'criterion': 'gini'}
+**==> Decision Tree Hyperparameters
+{'min_samples_split': 3, 'min_samples_leaf': 2, 'max_depth': 1000, 'criterion': 'entropy'}
+=> Decimal Features: (Decision Tree Validation Score:  0.9565871396431748 )
+=> Binary Features:  (Decision Tree Validation Score:  0.9565714435201172 )
+=> Decimal Features: (Decision Tree Testing Score: 	 0.930635838150289 )
+=> Binary Features:  (Decision Tree Testing Score: 	 0.9508670520231214 )
 ==> Decimal Features: Decision Tree performance
               precision    recall  f1-score   support
 
-           1       0.98      1.00      0.99       235
-           2       0.99      0.86      0.92        83
-           3       0.50      0.91      0.65        11
-           4       0.93      0.82      0.87        17
+           1       0.97      1.00      0.98       235
+           2       0.96      0.77      0.85        83
+           3       0.44      1.00      0.61        11
+           4       1.00      0.76      0.87        17
 
-    accuracy                           0.95       346
-   macro avg       0.85      0.90      0.86       346
-weighted avg       0.97      0.95      0.96       346
+    accuracy                           0.93       346
+   macro avg       0.84      0.88      0.83       346
+weighted avg       0.95      0.93      0.93       346
 
 ==> Binary Features: Decision Tree performance
               precision    recall  f1-score   support
 
-           1       0.97      1.00      0.99       235
-           2       1.00      0.84      0.92        83
-           3       0.56      0.91      0.69        11
-           4       0.81      0.76      0.79        17
+           1       0.98      1.00      0.99       235
+           2       0.97      0.87      0.92        83
+           3       0.62      0.91      0.74        11
+           4       0.80      0.71      0.75        17
 
     accuracy                           0.95       346
-   macro avg       0.83      0.88      0.84       346
-weighted avg       0.96      0.95      0.95       346
+   macro avg       0.84      0.87      0.85       346
+weighted avg       0.95      0.95      0.95       346
 
 
 [4] Random Forest Classification - k-fold Validation (k= 5 )
 ====================================================================================
-=> Decimal Features: (Random Forest Validation Score:  0.9645424580128708 )
-=> Binary Features:  (Random Forest Validation Score:  0.9660021974572282 )
-=> Decimal Features: (Random Forest Testing Score: 	 0.9566473988439307 )
-=> Binary Features:  (Random Forest Testing Score: 	 0.9682080924855492 )
+**==> Random Forest Hyperparameters
+{'n_estimators': 500, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 100, 'criterion': 'gini'}
+**==> Random Forest Hyperparameters
+{'n_estimators': 50, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': None, 'max_depth': 500, 'criterion': 'gini'}
+=> Decimal Features: (Random Forest Validation Score:  0.9725108564851148 )
+=> Binary Features:  (Random Forest Validation Score:  0.966724219117878 )
+=> Decimal Features: (Random Forest Testing Score: 	 0.9595375722543352 )
+=> Binary Features:  (Random Forest Testing Score: 	 0.9624277456647399 )
 ==> Decimal Features: Random Forest performance
               precision    recall  f1-score   support
 
            1       0.99      1.00      0.99       235
            2       0.96      0.88      0.92        83
-           3       0.56      0.82      0.67        11
+           3       0.59      0.91      0.71        11
            4       0.88      0.88      0.88        17
 
     accuracy                           0.96       346
-   macro avg       0.85      0.89      0.86       346
-weighted avg       0.96      0.96      0.96       346
+   macro avg       0.86      0.92      0.88       346
+weighted avg       0.97      0.96      0.96       346
 
 ==> Binary Features: Random Forest performance
               precision    recall  f1-score   support
 
            1       1.00      1.00      1.00       235
            2       0.99      0.89      0.94        83
-           3       0.59      0.91      0.71        11
-           4       0.84      0.94      0.89        17
+           3       0.56      0.91      0.69        11
+           4       0.82      0.82      0.82        17
 
-    accuracy                           0.97       346
-   macro avg       0.85      0.94      0.88       346
-weighted avg       0.98      0.97      0.97       346
+    accuracy                           0.96       346
+   macro avg       0.84      0.91      0.86       346
+weighted avg       0.97      0.96      0.96       346
 
 
 [5] SVM Classification - k-fold Validation (k= 5 )
 ====================================================================================
-=> Decimal Features: (SVM Validation Score:  0.9761183487678544 )
-=> Binary Features:  (SVM Validation Score:  0.9898707685868258 )
-=> Decimal Features: (SVM Testing Score: 	 0.9653179190751445 )
-=> Binary Features:  (SVM Testing Score: 	 0.976878612716763 )
+**==> SVM Hyperparameters
+{'kernel': 'rbf', 'gamma': 0.1, 'degree': 7, 'C': 1}
+**==> SVM Hyperparameters
+{'kernel': 'poly', 'gamma': 100, 'degree': 6, 'C': 0.03}
+=> Decimal Features: (SVM Validation Score:  0.9638256683932402 )
+=> Binary Features:  (SVM Validation Score:  0.9826270077957411 )
+=> Decimal Features: (SVM Testing Score: 	 0.9450867052023122 )
+=> Binary Features:  (SVM Testing Score: 	 0.9855491329479769 )
 ==> Decimal Features: SVM performance
               precision    recall  f1-score   support
 
-           1       0.98      1.00      0.99       235
-           2       0.99      0.90      0.94        83
-           3       0.67      0.91      0.77        11
-           4       0.88      0.82      0.85        17
+           1       0.97      1.00      0.98       235
+           2       0.96      0.83      0.89        83
+           3       0.59      0.91      0.71        11
+           4       0.93      0.82      0.87        17
 
-    accuracy                           0.97       346
-   macro avg       0.88      0.91      0.89       346
-weighted avg       0.97      0.97      0.97       346
+    accuracy                           0.95       346
+   macro avg       0.86      0.89      0.87       346
+weighted avg       0.95      0.95      0.95       346
 
 ==> Binary Features: SVM performance
               precision    recall  f1-score   support
 
            1       1.00      1.00      1.00       235
-           2       0.99      0.93      0.96        83
-           3       0.62      0.91      0.74        11
+           2       0.99      0.96      0.98        83
+           3       0.77      0.91      0.83        11
            4       0.94      0.94      0.94        17
 
-    accuracy                           0.98       346
-   macro avg       0.89      0.94      0.91       346
-weighted avg       0.98      0.98      0.98       346
+    accuracy                           0.99       346
+   macro avg       0.92      0.95      0.94       346
+weighted avg       0.99      0.99      0.99       346
 
 +----+--------------------------+------------------------+---------------------+------------------------+---------------------+
 | ID | Algorithm                | Validation Score (dec) | Testing Score (dec) | Validation Score (bin) | Testing Score (bin) |
@@ -168,9 +188,9 @@ weighted avg       0.98      0.98      0.98       346
 | 0  | Majority Vote (Baseline) | 1.0                    | 0.7002314814814815  | 1.0                    | 0.7002314814814815  |
 | 1  | KNN                      | 0.9391906032543295     | 0.9479768786127167  | 0.9117066917804635     | 0.8872832369942196  |
 | 2  | Naive Bayes              | 0.6376811594202898     | 0.6734104046242775  | 0.8115942028985508     | 0.815028901734104   |
-| 3  | Decision Tree            | 0.9645424580128708     | 0.953757225433526   | 0.9602050960079527     | 0.9479768786127167  |
-| 4  | Random Forest            | 0.9645424580128708     | 0.9566473988439307  | 0.9660021974572282     | 0.9682080924855492  |
-| 5  | SVM                      | 0.9761183487678544     | 0.9653179190751445  | 0.9898707685868258     | 0.976878612716763   |
+| 3  | Decision Tree            | 0.9565871396431748     | 0.930635838150289   | 0.9565714435201172     | 0.9508670520231214  |
+| 4  | Random Forest            | 0.9725108564851148     | 0.9595375722543352  | 0.966724219117878      | 0.9624277456647399  |
+| 5  | SVM                      | 0.9638256683932402     | 0.9450867052023122  | 0.9826270077957411     | 0.9855491329479769  |
 +----+--------------------------+------------------------+---------------------+------------------------+---------------------+
 
 Process finished with exit code 0

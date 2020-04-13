@@ -54,6 +54,9 @@ def knn_train_k_fold(X_labelled, y_labelled):
             knn_best_score = itr_acc
             knn_best_n_neighbors = i+1
 
+    print('**==> KNN Hyperparameters')
+    print('n=', knn_best_n_neighbors)
+
     return knn_best_score, knn_best_n_neighbors
 
 # ------------------------------------------------------------------------------------
