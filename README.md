@@ -26,4 +26,7 @@ Available at [https://archive.ics.uci.edu/ml/datasets/Car+Evaluation](https://ar
 - The dataset is skewed towards 'unacc' class with almost 70% of the dataset in this class
 
 ### License 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)   
+
+### Contributer
+Islam A. Ali, PhD Student, Computing Science, University of Alberta

@@ -26,6 +26,7 @@
 \usepackage{tabularx}
 \usepackage{mathtools}
 
+
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Islam A. Ali}
@@ -138,45 +139,50 @@ SVM is a classification algorithm that aims at finding the best hyperplane to se
 In this section, the experimental results of the 5 algorithms are provided with discussion of the findings. The results include reporting of the accuracy, precision, recall, F1-measure, and the confusion matrix. 
 
 \subsection{Accuracy}
-
+In terms of accuracy, one can observe two main points. The first one is the superiority of the SVM classifier when compared to others, and the better performance resulting from using binary features rather than decimal features except for the KNN classifier. \\
+\indent We can also observe that Naive Bayes was held behind when compared to all other classifiers. The superiority of the SVM can be due to the fine tuning of the hyperparameters with usage of kernels. Also, this fine tuning can result in a guarding margin that can avoid mis-classification. The problem with Naive Bayes is obviously due to the main assumption of features independence upon which the whole algorithm intuition is based on. This assumption may not be valid in a wide range of problems and this data set is no difference. Another point to note, is the close performance we get from Decision Tree and Random Forest, regardless of the existence of extra classification advantage for the Random Forest which is having more trees/estimators available. This may be due to the nature of the data set and the fact that the extra estimators acted as redundant estimators with no much added value. \\
+\indent Regarding comparison of binary and decimal features representation, we can observe a huge improvement in the accuracy in case of Naive Bayes compared to small but obvious increase of performance in other classifiers. It can be concluded that increasing the number of features or having binary features in case of categorical data set can yield in performance enhancement. This result cannot be generalized as this can be specific to the this data set. To generalize such observation, other data sets with different sizes, different structure, and also different tasks need to be tested and evaluated to confirm that this conclusion is general enough.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../Figures/accuracy.png}
 \caption{Classification Accuracy in case of Decimal and Binary Features}
 \end{figure}
 
-\subsection{Precision}
-
+\subsection{Precision, Recall, and F1-Measure}
+In terms of precision, the SVM with binary features representation continues its superior performance compared to other classifiers. KNN with decimal features comes in second place. We can observe that the consistent performance of binary features in case of accuracy does not hold when comparing algorithms based on precision. \\
+\indent With regard to the Naive Bayes performance, it is still the producing the worst results, however, the difference compared to other algorithms is not tremendous in terms of precision. This is an evidence that precision alone cannot be the sole determiner of algorithms acceptability and other measures are needed to be reported in order to properly judge the performance of an algorithm for both inference and generalization. \\
+\indent When comparing Decision Tree and Random Forest, we can observe close performance with no major difference confirming the fact that the peak performance with respect to this data set is achieved by a single decision tree. 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../Figures/precision.png}
-\caption{Classification Accuracy in case of Decimal and Binary Features}
+\caption{Classification Precision in case of Decimal and Binary Features}
 \end{figure}
 
-\subsection{Recall}
+Recall shows similar pattern to what was observed in the precision section above with a shift in the magnitudes. However, in case of Naive Bayes, it shows a very degraded performance specially in case of decimal features representation due to the sensitivity of Naive Bayes to the number of features as we mentioned earlier. The very degraded performance of Naive Bayes gives more evidence to the violation of the features independence assumption made by the algorithm and ensure the unsuitability of its usage in this task or similar tasks with similar data sets. \\
+
+F1-measure is a hybrid performance metrics that takes into consideration both the precision and the recall. The results provided in Fig. 5, confirms what was mentioned in previous metrics and adds more separation in performance between algorithms. SVM is confirmed to produce the best results in this task. Naive Bayes is also confirmed to be unsuitable classification algorithm for this task and its prerequisites assumptions are not met. Other algorithms such as KNN, Decision Tree, Random Forest, produced good results comparable to the SVM. F1-measure also confirms the usefulness of increasing the number of features and using binary representation when dealing with categorical data. 
+
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../Figures/recall.png}
-\caption{Classification Accuracy in case of Decimal and Binary Features}
+\caption{Classification Recall in case of Decimal and Binary Features}
 \end{figure}
-
-\subsection{F1-Measure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{../Figures/f1.png}
-\caption{Classification Accuracy in case of Decimal and Binary Features}
+\caption{Classification F1-Measure in case of Decimal and Binary Features}
 \end{figure}
 
 \subsection{Confusion Matrix}
-
+The following are plots of confusion matrices in case of both decimal and binary features for the five classification algorithms experimented. They show how the mis-classifications are distributed among classes. Due to the size of the data set and the fact that the data is skewed towards a single class with more than 70\% of its size, confusion matrices shows that most samples are condensed in the first cell.
 \input{conf_mat.tex}
 
 % ==========================================================================
 
 \section{Conclusion}
-
+In this report, the problem of classifying the acceptability of cars based on categorical features is studied in detail. Additionally, two different features representation were implemented and the performance yield was measured to determine the impact of each was reported. Moreover, five classification algorithms were tested with on the selected data set with both features representations. The algorithms are: Naive Bayes, K-Nearest Neighbors, Decision Tree, Random Forest, and Support Vector Machines. The performance of these algorithms in terms of accuracy was compared to a baseline performance which is set to be a classification of all samples to belong to the dominating class, and were also compared to each other. Formal hyperparameters tuning was conducted on all algorithms using either exhaustive search (in case of Naive Bayes and KNN) or random search (otherwise). The results shown that, SVM with binary features representation provided the best results. Naive Bayes was also proved to be unsuitable to this task with very poor results. This degraded Navie Bayes performance is thought to be due to the features independence assumption needed for the algorithm to work. It was also shown that for data sets similar to the one used, increasing the number of features even by binary representation can yield in performance enhancement. Finally, it worth mentioning that these conclusions cannot be generalized to other cases unless more testing is done with other data sets to ensure the applicability of generalization.
 
 % ==========================================================================
 \end{document}
